@@ -132,14 +132,14 @@ else:
     st.table(results[SHOW].rename(columns=str.capitalize).reset_index(drop=True))
 
 # Counter
-# if "counter_tried" not in st.session_state:
-#     st.session_state.counter_tried = True
-#     st.session_state.total = increment_visits()
+if "counter_tried" not in st.session_state:
+    st.session_state.counter_tried = True
+    st.session_state.total = increment_visits()
 
-# if st.session_state.get("total") is not None:
-#     st.caption(f"Visitas totales: {st.session_state.total:,}")
-# elif "counter_error" in st.session_state:
-#     st.caption(f"Contador no disponible: {st.session_state['counter_error']}")
+if st.session_state.get("total") is not None:
+    st.caption(f"Visitas totales: {st.session_state.total:,}")
+elif "counter_error" in st.session_state:
+    st.caption(f"Contador no disponible: {st.session_state['counter_error']}")
 
 
 # Footnotes
