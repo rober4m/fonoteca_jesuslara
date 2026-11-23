@@ -125,7 +125,7 @@ extras = st.multiselect("También mostrar:", list(EXTRA), default=[], placeholde
 SHOW = BASE + [EXTRA[e] for e in extras]
 
 if not query.strip():
-    st.info("Escribe un autor o título para buscar.")
+    st.info("Escribe un artista o album para buscar.")
 else:
     shown = len(results)
     st.caption(f"{shown} resultados" + (" (mostrando los primeros 200)" if shown == 200 else ""))
