@@ -6,7 +6,7 @@ from pathlib import Path
 import time
 # Paths
 root = Path(__file__).resolve().parent
-logo = root /'src'/'img'/'fonoteca_jesuslara.png'
+logo = root /'src'/'img'/'MunicipalFonotecaCocha.png'
 # Main 
 st.image(logo, width=700)  
 # st.title('Fonoteca Jesús Lara')
@@ -118,8 +118,8 @@ with st.spinner(text="Revisando los estantes..."):
         st.success("¡Listo! Mira lo que encontramos")
 
 # Show results
-BASE = ["artista", "album", "codigo", "sello discografico", "año"]
-EXTRA = {"Formato": "formato", "Bloque": "bloq", "Estado":"estado"}   # label -> column name
+BASE = ["artista", "album","bloq", "codigo", "año"]
+EXTRA = {"Formato": "formato", "Sello discografico": "sello_discografico", "Estado":"estado"}   # label -> column name
 
 extras = st.multiselect("También mostrar:", list(EXTRA), default=[], placeholder="Elegir opciones")
 SHOW = BASE + [EXTRA[e] for e in extras]
