@@ -10,7 +10,7 @@ logo = root /'src'/'img'/'MunicipalFonotecaCocha.png'
 # Main 
 st.image(logo, width=700)  
 # st.title('Fonoteca Jesús Lara')
-st.markdown('Catálogo en línea · busca por artista, género o album 🎶')
+st.markdown('##### Catálogo en línea · busca por artista, género o album 🎶')
 
 
 # Functions
@@ -142,7 +142,11 @@ if st.session_state.get("total") is not None:
 elif "counter_error" in st.session_state:
     st.caption(f"Contador no disponible: {st.session_state['counter_error']}")
 
+# Activities
 
+st.divider()
+st.markdown("##### 📅 Agenda de actividades")
+st.markdown("Estamos preparando nuevas actividades. ¡Vuelve pronto! 🎼")
 # Footnotes
 st.divider()
 st.markdown('Recomendación de la semana')
@@ -157,5 +161,6 @@ st.iframe(
     """,
     height=130,
 )
+
 st.divider()
 st.markdown("Developed by [Rober Mamani](https://robermamani.com)")
