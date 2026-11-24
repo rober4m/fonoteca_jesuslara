@@ -1,0 +1,26 @@
+[server]
+enableStaticServing = false
+
+[theme]
+base = "light"
+font = "Alata:https://fonts.googleapis.com/css2?family=Alata&display=swap"
+headingFont = "Alata:https://fonts.googleapis.com/css2?family=Alata&display=swap"
+codeFont = "'Space Mono':https://fonts.googleapis.com/css2?family=Space+Mono&display=swap"
+
+primaryColor = "#c41e3a"
+backgroundColor = "#ffffff"
+secondaryBackgroundColor = "#f6f2ee"
+textColor = "#1a1a1a"
+linkColor = "#0066cc"
+baseRadius = "0.5rem"
+borderColor = "#e0e0e0"
+baseFontSize = 14
+
+[theme.sidebar]
+backgroundColor = "#f6f2ee"
+
+[client]
+toolbarMode = "minimal"
+
+[browser]
+gatherUsageStats = false
