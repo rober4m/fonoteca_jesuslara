@@ -120,7 +120,7 @@ with st.spinner(text="Revisando los estantes..."):
 
 # Show results
 BASE = ["artista", "album","bloq", "codigo", "año"]
-EXTRA = {"Formato": "formato", "Sello discografico": "sello discografico", "Estado":"estado", "Pais":"pais"}   # label -> column name
+EXTRA = {"Formato": "formato", "Sello discografico": "sello discografico", "Estado":"estado", "Pais":"pais", "Genero":"genero", "Nota":"nota"}   # label -> column name
 
 extras = st.multiselect("También mostrar:", list(EXTRA), default=[], placeholder="Elegir opciones")
 SHOW = BASE + [EXTRA[e] for e in extras]
