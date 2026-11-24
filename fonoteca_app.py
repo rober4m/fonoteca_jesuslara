@@ -24,8 +24,9 @@ def load_data():
     df["_album"] = df["album"].map(normalize)
     df["_genero"] = df["genero"].map(normalize)
     df["_formato"] = df["formato"].map(normalize)
-    df["_sello_discografico"] = df["sello discografico"].map(normalize)
+    # df["_sello_discografico"] = df["sello discografico"].map(normalize)
     df["_año"] = df["año"].map(normalize)
+    df["_pais"] = df["pais"].map(normalize)
     return df
 
 def normalize(text):
@@ -100,7 +101,7 @@ def increment_visits():
 
 ### App funcionalities
 # search by
-field = st.radio('Buscar por:', ('Artista', 'Album', 'Genero', 'Año'),  horizontal=True, label_visibility='collapsed')
+field = st.radio('Buscar por:', ('Artista', 'Album', 'Genero', 'Pais', 'Año'),  horizontal=True, label_visibility='collapsed')
 query = st.text_input("Buscar: ", key="query", placeholder=f"{field} ")
 st.button('Buscar', key='buscar')
 
@@ -119,7 +120,7 @@ with st.spinner(text="Revisando los estantes..."):
 
 # Show results
 BASE = ["artista", "album","bloq", "codigo", "año"]
-EXTRA = {"Formato": "formato", "Sello discografico": "sello_discografico", "Estado":"estado"}   # label -> column name
+EXTRA = {"Formato": "formato", "Sello discografico": "sello discografico", "Estado":"estado", "Pais":"pais"}   # label -> column name
 
 extras = st.multiselect("También mostrar:", list(EXTRA), default=[], placeholder="Elegir opciones")
 SHOW = BASE + [EXTRA[e] for e in extras]
